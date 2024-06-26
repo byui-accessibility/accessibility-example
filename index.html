@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="index-styles.css">
+<title>index.html</title>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdownBtn = document.getElementById('dropdown-btn');
+  var dropdownMenu = document.getElementById('dropdown-menu');
+
+  dropdownBtn.addEventListener('click', function () {
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    dropdownMenu.setAttribute('aria-hidden', expanded);
+    dropdownMenu.style.display = expanded ? 'none' : 'block';
+    if (!expanded) {
+      dropdownMenu.querySelector('a').focus();
+    }
+  });
+  dropdownBtn.addEventListener('mouseover', function () {
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    dropdownMenu.setAttribute('aria-hidden', expanded);
+    dropdownMenu.style.display = expanded ? 'none' : 'block';
+    if (!expanded) {
+      dropdownMenu.querySelector('a').focus();
+    }
+  });
+	dropdownBtn.addEventListener('mouseout', function () {
+		if (!dropdownBtn.contains(event.relatedTarget) && !dropdownMenu.contains(event.relatedTarget)) {
+			dropdownMenu.style.display = 'none';
+			dropdownBtn.setAttribute('aria-expanded', 'false');
+		}
+  });
+
+  dropdownMenu.addEventListener('focusout', function () {
+    if (!dropdownBtn.contains(event.relatedTarget) && !dropdownMenu.contains(event.relatedTarget)) {
+		dropdownMenu.style.display = 'none';
+		dropdownBtn.setAttribute('aria-expanded', 'false');
+	}
+  });
+});
+</script>
+
+</head>
+<body>
+<div id="skip">
+<a href="#main">Skip to main content</a>
+</div>
+<nav>
+	<ul>
+		<li><a href="./index.html">Page 1</a></li>
+		<li><a href="./page-2.html">Page 2</a></li>
+		<li><a href="./good-examples.html">Criteria Examples</a></li>
+		<li>
+			<div class="dropdown-menu">
+				<button id="dropdown-btn" aria-expanded="false" aria-controls="dropdown-menu">Dropdown Menu ↓</button>
+				<ul id="dropdown-menu" aria-labelledby="dropdown-btn" tabindex="-1" aria-hidden="true">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+<main id="main">
+<h1>Software Testing Example</h1>
+<p>Welcome to my totally cool and 100% totally accessible page. I bet you can't find any issues with this page.</p>
+<p>Make sure you allow wave to access this page! Just follow the instructions at this <a href="https://support.google.com/chrome_webstore/answer/2664769?hl=en">link</a>.</p>
+<p>Click the red text:</p>
+<button id="red">text</button>
+<button id="hidden">you found me!</button>
+<button id="green">text</button>
+<div class="image-div">
+	<img id="cat-image" src="./Sources/animal.jpg" alt="human walking down the street">
+	<h3>Here is a cool image of a cat I found on the internet.</h3>
+</div>
+<div class="image-div">
+	<img id="camera-image" src="./Sources/camera.jpg" aria-labelledby="no-label">
+	<span id="camera-label">This is a cool camera I found (don't ask how I took the picture.)</span>
+</div>
+<div id="video-example">
+<span> I love Never Gonna Give You Up!</span>
+<video width="320" height="240" controls>
+  <source src="./Sources/rickroll.mp4" type="video/mp4">
+</div>
+<p id="more-paragraphs">Hey! I just wanted to write more here so I could add a cool background.</p>
+</main>
+</body>
+</html>

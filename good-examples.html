@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="index-styles.css">
+<link rel="stylesheet" href="good-example.css">
+<script src="good-example.js" defer></script>
+<title>Criteria Examples</title>
+
+</head>
+<body>
+<div class="skip" id="skip">
+<a href="#intro" id="skip-top">Skip to main content</a>
+</div>
+<div class="skip" id="skip-contents">
+<a href="#keyboard-navigation">Skip past table of contents</a>
+</div>
+<nav>
+	<ul>
+		<li><a href="./index.html">Page 1</a></li>
+		<li><a href="./page-2.html">Page 2</a></li>
+		<li><a href="./good-examples.html">Criteria Examples</a></li>
+	</ul>
+</nav>
+<main id="main">
+	<h1 id="intro">Criteria Examples</h1>
+		<p>This page contains examples of what certain criteria should look like. There are some accessibility issues with some of the examples. Most of the issues should have notes in the criteria describing them. That being said, its most likely that not every issue with the page has been found so do <b>not</b> take the examples on this page as 100% correct. You should use your best judgement, our training videos, and the WCAG guidelines to help you decide if anything is an issue. This page follows the in-depth criteria in the <a href="https://docs.google.com/spreadsheets/d/1SSjXhnJEqRwNS0fJsSoetPX-ACwOyh36yjajfx4f248/edit?gid=0#gid=0">Accessibility Audit Template</a>.</p>
+		<p><b>For Software Team Leads:</b> If you ever want to change anything on this page, you will need to go to this websites <a href="https://github.com/Ty-Pope/accessibility-example">repository</a> and clone it (or you can download the source code that is on the <a href="https://drive.google.com/drive/folders/1pikxsYCjO1_cMnasB4p6Az6unhZC0HGq">shared drive</a> if it has been kept up to date. Last updated 6/25/24) Then you will need to publish your own github pages. You will then need to update the <a href="https://docs.google.com/spreadsheets/d/1SSjXhnJEqRwNS0fJsSoetPX-ACwOyh36yjajfx4f248/edit?gid=0#gid=0">audit template in-depth page</a>, <a href="https://docs.google.com/document/d/1CyEiso7zoIVJKhJBlf9x4fK08_t7L-QQaLCN3RLm4cs/edit#heading=h.pxyu23e5g1no">READ ME document</a>, and the <a href="https://docs.google.com/document/d/1kFrJik3ZRKjBWDNtsSCKUooq5qPZVaI08oCWiBjTa1o/edit#heading=h.o3lzi8r8uwuz"> Accessibility Test Process document</a>. I know, kind of a pain but it is free. Maybe in the future an accessibility github account should be created so then this issue can be solved a little easier. I used notepad++ as my editor if you are wondering how to update any of the files. Recording and using macros was very helpful.</p>
+
+	<h2 id="table-of-contents">Table of Contents</h2>
+    <ul>
+        <li><a href="#keyboard-navigation">Keyboard Navigation</a>
+            <ul>
+                <li><a href="#skip-link">A "skip link" is provided for all repeating elements on the page</a></li>
+                <li><a href="#active-elements">All active/onscreen elements are accessible and function properly w/ keyboard</a></li>
+                <li><a href="#inactive-elements">All inactive/offscreen elements are ignored by keyboard</a></li>
+                <li><a href="#focus-indicator">Focus indicator is easily visible and consistent throughout page</a></li>
+                <li><a href="#navigation-order">Navigation order is logical follows the flow of the page</a></li>
+                <li><a href="#menus-navigation">Menus are easy to navigate, logical, and intuitive</a></li>
+                <li><a href="#forms-navigation">Forms are easy to navigate, logical, and intuitive</a></li>
+                <li><a href="#multiple-ways">Multiple ways are available to the user to find other webpages on the site</a></li>
+                <li><a href="#no-unexpected-changes">Interacting with elements on the page doesn't cause any unexpected, dramatic changes that may confuse the user</a></li>
+                <li><a href="#auto-updating-content">Automatically updating content can be paused, stopped, hidden or allow user to modify the timing of content</a></li>
+                <li><a href="#consistent-keys">Keys used in navigation are consistent and logical throughout webpage / website</a></li>
+                <li><a href="#key-commands-off">Key commands built into site can be turned off or are only active on certain elements of the page</a></li>
+                <li><a href="#close-dynamic-content">The user has a way to close content that is dynamically added to the webpage without deleting other content</a></li>
+                <li><a href="#focusing-prevents-disappearing">Focusing prevents additional content from disappearing</a></li>
+                <li><a href="#additional-content-visible">Additional content is visible for as long as the user needs it, or until the information is no longer valid or relevant</a></li>
+                <li><a href="#no-keyboard-traps">No keyboard traps exist on the page</a></li>
+            </ul>
+        </li>
+        <li><a href="#screen-reader-navigation">Screen Reader Navigation</a>
+            <ul>
+                <li><a href="#sr-skip-link">A "skip link" is provided for all repeating elements on the page</a></li>
+                <li><a href="#sr-active-elements">All active/onscreen elements are accessible and function properly w/ screen reader</a></li>
+                <li><a href="#sr-inactive-elements">All inactive/offscreen elements are ignored by screen reader</a></li>
+                <li><a href="#sr-menus-navigation">Menus are easy to navigate logical, and intuitive</a></li>
+                <li><a href="#sr-forms-navigation">Forms are easy to navigate, logical, and intuitive</a></li>
+                <li><a href="#sr-multiple-ways">Multiple ways are available to find other webpages on the site</a></li>
+                <li><a href="#sr-no-unexpected-changes">Interacting with the page doesn't cause any changes that may confuse the user</a></li>
+                <li><a href="#sr-auto-updating-content">Automatically updating content can be paused, stopped, have timing modified</a></li>
+                <li><a href="#sr-consistent-keys">Keys used in navigation are consistent and logical throughout page</a></li>
+                <li><a href="#sr-no-keyboard-traps">Keyboard traps are non-existant on the page</a></li>
+                <li><a href="#sr-key-commands-off">Key commands built into site can be turned off or are only active on certain elements</a></li>
+                <li><a href="#sr-no-key-command-overrides">Key commands do not override screen reader key commands or cause unexpected results</a></li>
+                <li><a href="#sr-close-dynamic-content">Dynamically added content can be closed without deleting other content</a></li>
+                <li><a href="#sr-focus-prevents-disappearing">Keyboard focus prevents additional content from disappearing</a></li>
+                <li><a href="#sr-valid-content">Valid and relevant content can be seen for as long as needed</a></li>
+                <li><a href="#sr-alerts-read-aloud">Alerts are read aloud by screen reader every time they are added</a></li>
+                <li><a href="#sr-language-attribute">Websites use appropriate language attribute</a></li>
+            </ul>
+        </li>
+        <li><a href="#titles-headings">Titles and Headings</a>
+            <ul>
+                <li><a href="#page-titles">Web pages have titles that describe topic and purpose</a></li>
+                <li><a href="#heading-order">Headings are in a logical order and don’t skip levels</a></li>
+                <li><a href="#heading-labels">Headings/labels clearly describe the topic/purpose including interactive components</a></li>
+                <li><a href="#functional-text-as-header">Text that serves the same functionality as a header/label is properly assigned as one</a></li>
+                <li><a href="#consistent-element-titles">Similar elements throughout the website are consistent in formatting and styling</a></li>
+            </ul>
+        </li>
+        <li><a href="#tables">Tables</a>
+            <ul>
+                <li><a href="#appropriate-html-tables">Tables are created using appropriate HTML formatting</a></li>
+                <li><a href="#appropriate-table-headers">Tables use appropriate headers</a></li>
+                <li><a href="#table-read-order">Tables must be created so they are read from top to bottom, left to right</a></li>
+            </ul>
+        </li>
+        <li><a href="#text">Text</a>
+            <ul>
+                <li><a href="#visual-text">Visual elements are created using text and not using images</a></li>
+                <li><a href="#font-size">Font size can be increased up to 200% without making any of the content hard to read</a></li>
+                <li><a href="#text-not-images">Information is presented using text, and not images of text</a></li>
+            </ul>
+        </li>
+        <li><a href="#time-limits">Time Limits</a>
+            <ul>
+                <li><a href="#time-limit-options">If a page or application has a time limit, the user is given options to turn off, adjust, or extend that time limit</a></li>
+            </ul>
+        </li>
+        <li><a href="#hyperlinks">Hyperlinks</a>
+            <ul>
+                <li><a href="#consistent-link-order">Links that are repeated throughout a website are presented in the same relative order each time they appear</a></li>
+                <li><a href="#consistent-link-titles">Links that appear repeatedly throughout a website have identical or at least consistent title text</a></li>
+                <li><a href="#clear-link-titles">Link titles clearly tell users the link’s destination</a></li>
+                <li><a href="#unique-link-titles">Link titles are distinct and unique to their location</a></li>
+                <li><a href="#appropriate-link-titles">Links have unique, appropriate title text and have multiple ways to clearly identify them as links</a></li>
+            </ul>
+        </li>
+        <li><a href="#images">Images</a>
+            <ul>
+                <li><a href="#descriptive-alt-text">All meaningful images have descriptive alt text</a></li>
+                <li><a href="#descriptive-image-labels">Images that serve a purpose or require user interaction have descriptive labels</a></li>
+                <li><a href="#image-text-name-attribute">Images of text should also have an alt attribute that contains the same text</a></li>
+                <li><a href="#decorative-images">Decorative images contain empty alt text</a></li>
+            </ul>
+        </li>
+        <li><a href="#videos">Videos</a>
+            <ul>
+                <li><a href="#video-title-description">Videos are introduced with a clear title and/or description</a></li>
+                <li><a href="#no-flashing-content">Videos have no flashing content that flashes more than 3X/second</a></li>
+                <li><a href="#stop-pause-sound">Video that plays automatically have a mechanism for stopping/pausing the sound</a></li>
+            </ul>
+        </li>
+        <li><a href="#transcripts-captions">Transcripts and Captions</a>
+            <ul>
+                <li><a href="#descriptive-transcripts">All pre-recorded videos have a descriptive transcript or audio descriptions</a></li>
+                <li><a href="#live-captions">Live video conferences and web casts have synchronized captions</a></li>
+            </ul>
+        </li>
+        <li><a href="#moving-flashing-content">Moving and Flashing Content</a>
+            <ul>
+                <li><a href="#pause-stop-content">Rapidly flashing or changing content can be paused or stopped</a></li>
+                <li><a href="#no-flashing-content-3X">Pages contain no flashing content that flashes more than three times per second</a></li>
+            </ul>
+        </li>
+        <li><a href="#color-usage">Color Usage</a>
+            <ul>
+                <li><a href="#color-solely">Color isn't used solely to understand information, navigate a page, complete a task, or know what action to take</a></li>
+                <li><a href="#color-contrast-small-text">Text that is 14 pt or smaller has a color contrast ratio of at least 4.5:1 with the background color</a></li>
+                <li><a href="#color-contrast-large-text">Large text has a color contrast ratio of at least 3:1</a></li>
+                <li><a href="#color-contrast-ui">UI components and graphical objects have a contrast ratio of at least 3:1</a></li>
+            </ul>
+        </li>
+        <li><a href="#audio-clips-sound">Audio Clips and Sound</a>
+            <ul>
+                <li><a href="#audio-title-description">All audio clips have a clear title and/or description beforehand</a></li>
+                <li><a href="#stop-audio">Audio that automatically plays for more than 3 seconds can be stopped by user</a></li>
+                <li><a href="#audio-only-transcripts">Pre-recorded clips that are audio-only have a transcript</a></li>
+                <li><a href="#live-audio-captions">Live broadcasts that are audio-only must contain synchronized captions</a></li>
+                <li><a href="#sound-description">A text description is provided for any sound used to indicate something</a></li>
+                <li><a href="#no-sound-only-instructions">Instructions don't rely solely on sound in order to understand or complete any task</a></li>
+            </ul>
+        </li>
+        <li><a href="#zoom-reflow">Zoom and Reflow</a>
+            <ul>
+                <li><a href="#zoom-200-300">The page is readable and functional when the page is zoomed to 200-300%</a></li>
+                <li><a href="#no-horizontal-scrolling">All text content is available without horizontal scrolling. Content can be displayed directly in the page, revealed via accessible controls, or accessed via direct links</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+	<h2 id="keyboard-navigation">Keyboard Navigation</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="skip-link">A "skip link" is provided for all repeating elements on the page</h3>
+		<p>A skip link should be present whenever repeating elements are present on a page or across a website. The skip link does not need to be visible unless it is being focused. Helpful WCAG Posts: <a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks">Understanding WCAG Criteria 2.4.1</a> and <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G1">Technique G1</a>. This page has two skip content buttons present. One skips the repeating nav bar element, the other skips the table of contents. The skip the table of contents button isn't required but it makes navigating the page easier.</p>
+	<h3 id="active-elements">All active/onscreen elements are accessible and function properly w/ keyboard</h3>
+		<p>All elements that have functionality (like links, buttons, and menus) should be able to be accessed with a keyboard as long as those elements are active and onscreen. Those active elements should also function in a consistent way. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">Understanding WCAG Criteria 2.1.1</a>. These buttons all being able to be accessed via keyboard navigation is a good example:</p>
+		<button class="alert1">Alert 1</button>
+		<button class="alert2">Alert 2</button>
+		<button class="alert3">Alert 3</button>
+	<h3 id="inactive-elements">All inactive/offscreen elements are ignored by keyboard</h3>
+		<p>Elements that are not visible or are inactive/disabled should be ignored by the keyboard. Example of a disabled element being ignored until the required fields are filled in:</p>
+		<form id="myForm">
+			<label for="name">First Name:*</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="last-name">Last Name:*</label>
+			<input type="text" id="last-name" name="last-name" required>
+
+			<label for="message">Message:*</label>
+			<input type="text" id="message" name="message" required></input>
+
+			<input type="submit" id="submitBtn" value="Submit" disabled>
+		</form>
+	<h3 id="focus-indicator">Focus indicator is easily visible and consistent throughout page</h3>
+		<p>A focus indicator does not necisarrily mean that a bright box highlights an element when it is focused. It means that there is a distinction on that element. This can be done by changing the background, having a cursor blink in a text input field, or highlighting the element. A focus indicator should be easily seen, not be hidden by a border or element, and should have strong enough contrast to tell where you are at on a page. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible">Understanding WCAG Criteria 2.4.7</a>. The focus indicator on this page is easily seen on these buttons:</p>
+		<button class="alert1">Alert 1</button>
+		<button class="alert2">Alert 2</button>
+		<button class="alert3">Alert 3</button>
+	<h3 id="navigation-order">Navigation order is logical follows the flow of the page</h3>
+		<p>Generally, navigation of a page is exptected to be top to bottom, left to right. Sometimes a page will be vertically sectioned off and the navigation flow will not exactly follow this order. Instead, the order should follow the sections structure as they go top to bottom, left to right. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order">Understanding WCAG Criteria 2.4.3</a>. Navigation flows left to right for these buttons (this is logical.)</p>
+		<button class="alert1">Alert 1</button>
+		<button class="alert2">Alert 2</button>
+		<button class="alert3">Alert 3</button>
+		<p>Here is a helpful diagram of what keyboard navigation of a section page should be like:</p>
+		<img id="flow-img" src="./Sources/page-flow.png" alt="a sectioned website with navigation from top to bottom, left to right, but going inside a section before going right.">
+	<h3 id="menus-navigation">Menus are easy to navigate, logical, and intuitive</h3>
+		<p>Menus should follow a logical navigation order. If the menu has a dropdown menu that is large and/or has submenus, then pressing escape should leave the menu. A dropdown menu should not have its elements iterated over while navigating the page unless the user has intentionally opened the menu. In the following example, the dropdown menu doesn't open while focusing over it, the user has to open the menu by pressing enter. Helpful WCAG Post: <a href="https://www.w3.org/WAI/tutorials/menus/">Menus Tutorial</a>. Here is an example navigation menu that uses a dropdown menu.</p>
+		<div id="nav">
+			<ul>
+				<li><a href="#skip-top">Top of Page</a></li>
+				<li><a href="#intro">Heading 1</a></li>
+				<li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+				<li>
+					<div class="dropdown-menu">
+						<button id="dropdown-btn" aria-expanded="false" aria-controls="dropdown-menu">Sources Used ↓</button>
+						<ul id="dropdown-menu" aria-labelledby="dropdown-btn" tabindex="-1" aria-hidden="true" style="display: none">
+							<li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+							<li><a href="https://chatgpt.com/">ChatGPT</a></li>
+							<li><a href="https://www.w3.org/">W3C</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	<h3 id="forms-navigation">Forms are easy to navigate, logical, and intuitive</h3>
+		<p>Forms should follow usual navigation techniques. All input fields should have a correct and properly assigned label. A label can be added via the label element and using the for attribute, using aria-label, aria-labelledby, or using title (not recommended.) A label can be hidden as long as the input still makes sense in the context (i.e. having a text input field next to a search button.) Any required input fields should be labeled as required (usually just the * symbol or the text "required" in the label will suffice.) Helpful WCAG Posts: <a href="https://www.w3.org/WAI/tutorials/forms/labels/">Labels Tutorial</a> and <a href="https://www.w3.org/WAI/tutorials/forms/">Forms Tutorial</a>. This is a good example of a form because all inputs have a properly assigned label and are assigned the correct type of input (all text in this example.) It should be noted that there should be a submission confirmation that says the form was successfully submitted.
+		<form id="myForm">
+			<label for="nav-name">First Name:*</label>
+			<input type="text" id="nav-name"required>
+
+			<label for="nav-last-name">Last Name:*</label>
+			<input type="text" id="nav-last-name" required>
+
+			<label for="nav-message">Message:*</label>
+			<input type="text" id="nav-message" required></input>
+
+			<input type="submit" id="nav-submitBtn" value="Submit">
+		</form>
+	<h3 id="multiple-ways">Multiple ways are available to the user to find other webpages on the site</h3>
+		<p>To put it simply, this criteria means that every webpage can easily be found unless the page is a step in a process (i.e. a multi page form doesn't need every page to be easily found.) For small websites, a simple navigation bar/menu will suffice. If it's a large website then a search mechanism would be best. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways">Understanding WCAG Criteria 2.4.5</a>. WCAG 2.1 and 2.2 Guidelines says using two or more of the following techniques is sufficient:</p>
+		<ul>
+			<li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G125">G125: Providing links to navigate to related Web pages</a></li>
+			<li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G64">G64: Providing a Table of Contents</a></li>
+			<li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G63">G63: Providing a site map</a></li>
+			<li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G161">G161: Providing a search function to help users find content</a></li>
+			<li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G126">G126: Providing a list of links to all other Web pages</a></li>
+			<li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G185">G185: Linking to all of the pages on the site from the home page</a></li>
+		</ul>
+	<h3 id="no-unexpected-changes">Interacting with elements on the page doesn't cause any unexpected, dramatic changes that may confuse the user</h3>
+		<p>Elements that affect a page should be easily understood and should not change the page in a way that can cause the user to become confused. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/on-input">Understanding WCAG Criteria 3.2.2</a>. In the following example, interacting with the elements are predictable. Their interactions and changes are expected because of the button's stating their purpose. It is also not dramatic as there is immediate and understandable feedback on what changes.</p>
+		<div class="container">
+			<div class="box" class="colorBox" id="colorBox" tabindex="0" aria-label="lightblue box"></div>
+			<div class="expected-message"></div>
+			<button onclick="changeColor('lightcoral')">Change to Coral</button>
+			<button onclick="changeColor('lightgreen')">Change to Green</button>
+			<button onclick="displayMessage()">Display Message</button>
+		</div>
+	<h3 id="auto-updating-content">Automatically updating content can be paused, stopped, hidden or allow user to modify the timing of content</h3>
+		<p>All elements that have a timer and/or update automatically should have a function to affect the change of the element. These elements/content should have one of the following be true: be able to be turned off, its time adjusted before the timer starts, extended before the time expires, have a time limit greater than 20 hours, the element is in real time (i.e. an auction,) or changing the time would invalidate the activity. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/on-input">Understanding WCAG Criteria 3.2.2</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable">Understanding WCAG Criteria 2.2.1</a>. This news story ticker can be stopeed, resumed, and the interval can be changed.</p>
+		<div class="ticker" id="ticker"><span>Welcome to the news ticker! Stay tuned for updates...</span></div>
+		<div class="controls">
+			<button onclick="resumeTicker()">Resume</button>
+			<button onclick="stopTicker()">Pause</button>
+			<label for="interval">Update Interval (ms): </label>
+			<input type="number" id="interval" value="2000" min="500" step="500">
+			<button onclick="updateInterval()">Set Interval</button>
+		</div>
+	<h3 id="consistent-keys">Keys used in navigation are consistent and logical throughout webpage/website</h3>
+		<p>Keyboard navigation buttons should be consistent across the same elements on the page and across the website. For example, tabbing through active elements that have a function would meet this criteria. On this website, every page uses the same ways to navigate. You can use tab to access all elements and arrow keys to change certain elements (like the interval in the previous section.) Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation">Understanding WCAG Criteria 3.2.3</a>.</p>
+	<h3 id="key-commands-off">Key commands built into site can be turned off or are only active on certain elements of the page</h3>
+		<p>If commands are a part of the whole site, the user should be able to easily change the commands. If there are custom commands in a a command area (like in the next example) it would be best to provide a way to change the commands, but not required. All commands that are just a letter anywhere on a website should allow the user to change the command and add another identifier (like CTRL + the character.) Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts">Understanding WCAG Criteria 2.1.4</a>. The following example shows a command area with custom commands. An issue with the command areas in this example is that setting it to CTRL + T opens up a new tab instead of creating the alert.</p>
+		<div class="command-area" id="commandArea1" tabindex="0">
+			<p>This is a command area. Press <span id="command1">Ctrl + C</span> to copy.</p>
+			<label for="commandInput1">Enter a new command:</label>
+			<input type="text" id="commandInput1">
+			<button onclick="updateCommand(1)">Update Command</button>
+		</div>
+
+		<div class="command-area" id="commandArea2" tabindex="0">
+			<p>This is another command area. Press <span id="command2">Ctrl + S</span> to save.</p>
+			<label for="commandInput2">Enter a new command:</label>
+			<input type="text" id="commandInput2">
+			<button onclick="updateCommand(2)">Update Command</button>
+		</div>
+	<h3 id="close-dynamic-content">The user has a way to close content that is dynamically added to the webpage without deleting other content</h3>
+		<p>Whenever dynamically added content is added to the page, like a pop-up window, the user can close the content and not close any other content when they do. Sometimes the content won't be focused or be focusable after navigating the whole page, which both are not compliant. When something pops up and covers other elements, it should become the focus. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR26">Understanding Technique SCR26</a>. The following shows an example of the user dynamically adding content in the form of text. Since the user is adding the content, it should appear after the add content button so that the user can more easily navigate it by going further along in the page.</p>
+		<button onclick="addContent()">Add Content</button>
+		<div id="content-container">
+			<div class="content-item">
+				<p>This is existing content.</p>
+			</div>
+		</div>
+	<h3 id="focusing-prevents-disappearing">Focusing prevents additional content from disappearing</h3>
+		<p>Elements that are only shown while its parent element is focused can be present on pages (like a dropdown menu.) Sometimes, the child elements will disappear while using keyboard navigation when focusing on them because the parent element isn't focused. That does not meet the criteria. When navigating the children elements, they should not disappear until they are no longer focused. Content also should not disappear/change while the user is focusing on it unless it is no longer valid/relevent. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus">Understanding WCAG Criteria 1.4.13</a>. In this example, whenever the focus changes from the show additional content button to the alert button, the alert button does not disappear. It should be noted that since the focus on me button acts like a dropdown menu, it should allow the user to skip the alert button in it.</p>
+		<div id="additional-focus">
+		<button class="focusable-button">
+			<span>Focus on me to show additional content ▼</span>
+		</button>
+		<button class="additional-content" onclick="focusAlert()">
+			<span>Click me to create an alert!</span>
+		</button>
+		</div>
+	<h3 id="additional-content-visible">Additional content is visible for as long as the user needs it, or until the information is no longer valid or relevant</h3>
+		<p>See the <a href="#auto-updating-content">Automatically updating content can be paused, stopped, hidden or allow user to modify the timing of content</a> criteria for an example where content is visible for as long as the user needs it.</p>
+		<p>Additional content is anything in the website that wasn't there when the page loaded. It is generally added whenever the user completes some action or interacts with an element (i.e. clicks a button.) The added content should be accessed for as long as the user needs or until the information is no longer correct or relevant. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus">Understanding WCAG Criteria 1.4.13</a>.</p>
+	<h3 id="no-keyboard-traps">No keyboard traps exist on the page</h3>
+		<p>A keyboard trap happens when a user is navigating via their keyboard and they get stuck in an area/component. The only way for the user to leave the trap is to either use a mouse to click out of it, reloading the page, or some other non-standard command that changes focus. If the page gives a command to exit the component then that meets quidelines. If you ever have to use anything besides basic keyboard navigation, or an easily displayed/explained way to continue navigating then it is most likely a compliance issue. This page has no keyboard traps so it is a good example. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html">Understanding WCAG Criteria 2.1.2</a>.</p>
+	<h2 id="screen-reader-navigation">Screen Reader Navigation</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="sr-skip-link">A "skip link" is provided for all repeating elements on the page</h3>
+		<p>Same as <a href="#skip-link">A "skip link" is provided for all repeating elements on the page</a>. The skip links should be able to be accessed and read by a screen reader.</p>
+	<h3 id="sr-active-elements">All active/onscreen elements are accessible and function properly w/ screen reader</h3>
+		<p>Very similar to <a href="#active-elements">All active/onscreen elements are accessible and function properly w/ keyboard</a>. A screen reader should be able to access all active elements and properly read them.</p>
+	<h3 id="sr-inactive-elements">All inactive/offscreen elements are ignored by screen reader</h3>
+		<p>Very similar to <a href="#inactive-elements">All inactive/offscreen elements are ignored by keyboard</a>. It is okay if the element is disabled and the screen reader still reads it, but make sure that it says disabled if it is disabled.</p>
+	<h3 id="sr-menus-navigation">Menus are easy to navigate, logical, and, intuitive</h3>
+		<p>Very similar to <a href="#menus-navigation">Menus are easy to navigate, logical, and intuitive</a>.</p>
+
+	<h3 id="sr-forms-navigation">Forms are easy to navigate, logical, and, intuitive</h3>
+		<p>Very similar to <a href="#forms-navigation">Forms are easy to navigate, logical, and intuitive</a>. A forms inputs should be properly read and easy to understand. You can use the WAVE tool to find most input field issues (like missing a label, two labels added, etc.)</p>
+	<h3 id="sr-multiple-ways">Multiple ways are available to find other webpages on the site</h3>
+		<p>Very similar to <a href="#multiple-ways">Multiple ways are available to the user to find other webpages on the site</a>.</p>
+	<h3 id="sr-no-unexpected-changes">Interacting with the page doesn't cause any changes that may confuse the user</h3>
+		<p>Very similar to <a href="#no-unexpected-changes">Interacting with elements on the page doesn't cause any unexpected, dramatic changes that may confuse the user</a>. The screen reader in the example should read out the color of the changing element.</p>
+	<h3 id="sr-auto-updating-content">Automatically updating content can be paused, stopped, have timing modified</h3>
+		<p>Very similar to <a href="#auto-updating-content">Automatically updating content can be paused, stopped, hidden or allow user to modify the timing of content</a>.</p>
+	<h3 id="sr-consistent-keys">Keys used in navigation are consistent and logical throughout page</h3>
+		<p>Same as <a href="#consistent-keys">Keys used in navigation are consistent and logical throughout webpage / website</a>. The keys used to navigate the page, including the screen reader keys and commands should be consistent and logical.</p>
+	<h3 id="sr-no-keyboard-traps">Keyboard traps are non-existant on the page</h3>
+		<p>Same as <a href="#no-keyboard-traps">No keyboard traps exist on the page</a>. </p>
+	<h3 id="sr-key-commands-off">Key commands built into site can be turned off or are only active on certain elements</h3>
+		<p> Same as <a href="key-commands-off">Key commands built into site can be turned off or are only active on certain elements of the page</a>. Key commands also should not affect the screen reader's commands or the commands should be able to be changed for the website.</p>
+	<h3 id="sr-no-key-command-overrides">Key commands do not override screen reader key commands or cause unexpected results</h3>
+		<p>Screen reader commands should not be overriden by the website/page, and screen reader commands should not also be combined with the websites commands (i.e. the screen reader command for jumping to the next header shouldn't also turn the page green.)</p>
+	<h3 id="sr-close-dynamic-content">Dynamically added content can be closed without deleting other content</h3>
+		<p>Same as <a href="#close-dynamic-content">the user has a way to close content that is dynamically added to the webpage without deleting other content</a>.</p>
+	<h3 id="sr-focus-prevents-disappearing">Keyboard focus prevents additional content from disappearing</h3>
+		<p>Same as <a href="#focusing-prevents-disappearing">Focusing prevents additional content from disappearing</a>.</p>
+	<h3 id="sr-valid-content">Valid and relevant content can be seen for as long as needed</h3>
+		<p>Same as <a href="additional-content-visible">Additional content is visible for as long as the user needs it, or until the information is no longer valid or relevant</a>.</p>
+	<h3 id="sr-alerts-read-aloud">Alerts are read aloud by screen reader every time they are added</h3>
+		<p>Any alert is read aloud by the screen reader without changing the focus/navigation. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">Understanding WCAG Criteria 4.1.3</a>. In most cases, the alert should be automatically read. The following example brings up a text alert that is read by the screen reader:</p>
+		<button id="alertButton">Notify me</button>
+		<div class="notification" id="alert-text" aria-live="assertive" aria-atomic="true">
+		</div>
+	<h3 id="sr-language-attribute">Websites use appropriate language attribute</h3>
+		<p>A language attribute should be added to every page. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page">Understanding WCAG Criteria 3.1.1</a>. This can be determined by using the wave tool. The language attribute will be at the top of the page. This page has the english language attribute assigned.</p>
+	<h2 id="titles-headings">Titles and Headings</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="page-titles">Web pages have titles that describe topic and purpose</h3>
+		<p>Web page titles should be descriptive of the page. The title should identify the current location without requiring users to read or interpret page content. This page follows it by titling this page "Criteria Examples" Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled">Understanding WCAG Criteria 2.4.2</a>.</p>
+	<h3 id="heading-order">Headings are in a logical order and don’t skip levels</h3>
+		<p>Headings should be nested by their rank/level. The most important heading has the rank 1, going down to heading rank 6. Headings with an equal or higher rank starts a new section while headings with a lower rank start a new subsection. Heading levels going down should not be skipped (i.e. A heading level 2 should not be followed by a heading level 4.) It is ok to skip headings when going up (i.e. A heading level 4 is followed by a heading level 2 that starts a new section.) In most cases, a heading level 1 should be present. Helpful <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">WCAG post on headings</a>. See the example of a compliant heading structure:</p>
+		<div class="heading-margin" id="heading-example">
+			<h1>H1: Space Teddy Inc.</h1>
+				<h2>H2: Navigation Menu</h2>
+				<h2>H2:An inside look at the new Space Teddy 6</h2>
+					<h3>H3:Table of Contents</h3>
+					<h3>H3: Cotton Fur</h3>
+					<h3>H3: Related Articles</h3>
+					<h3>H3: Latest Articles</h3>
+		</div>
+	<h3 id="heading-labels">Headings/labels clearly describe the topic/purpose including interactive components</h3>
+		<p>Headings/labels should provide an appropriate amount of information to understand the content it is sectioning/labeling. This criteria can be passed even if the criteria <a href="#functional-text-as-header">Text that serves the same functionality as a header/label is properly assigned as one</a> fails. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels">Understanding WCAG Criteria 2.2.2</a>.</p>
+	<h3 id="functional-text-as-header">Text that serves the same functionality as a heading/label is properly assigned as one</h3>
+		<p>If a page is sectioned off by large text, then the large text should be a heading, and text that labels an input should be a denoted as a label and should be properly assigned. The following example shows text that should be a heading level 2 but isn't:</p>
+		<div class="heading-margin" id="heading-functionality">
+			<h1>H1: Space Teddy Inc.</h1>
+				<p>(Not) H2: Navigation Menu</p>
+				<p>(Not) H2: An inside look at the new Space Teddy 6</p>
+					<h3>H3:Table of Contents</h3>
+					<h3>H3: Cotton Fur</h3>
+					<h3>H3: Related Articles</h3>
+					<h3>H3: Latest Articles</h3>
+		</div>
+	<h3 id="consistent-element-titles">Similar elements throughout the website are consistent in formatting and styling</h3>
+		<p>Elements/components that have the same functionality should have a consistent way to be identified throughout the website. For example, every link on this page is styled the same way (blue text and underlined.) Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification">Understanding WCAG Criteria 3.2.4</a>.</p>
+	<h2 id="tables">Tables</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="appropriate-html-tables">Tables are created using appropriate HTML formatting</h3>
+		<p>Tables should be used to organize data into a logical grid relationship. They need appropriate HTML markup that includes heading (th) and data (td) cells. Helpful WCAG post: <a href="https://www.w3.org/WAI/tutorials/tables/">Tables Tutorial</a>. Example of a table with two headers (<a href="https://www.w3.org/WAI/tutorials/tables/examples/headertoprowfirstcol/">taken from W3C website</a>.):</p>
+		<table class="table">
+			<tr>
+				<td></td>
+				<th scope="col">Monday</th>
+				<th scope="col">Tuesday</th>
+				<th scope="col">Wednesday</th>
+				<th scope="col">Thursday</th>
+				<th scope="col">Friday</th>
+			</tr>
+			<tr>
+				<th scope="row">09:00 – 11:00</th>
+				<td>Closed</td>
+				<td>Open</td>
+				<td>Open</td>
+				<td>Closed</td>
+				<td>Closed</td>
+			</tr>
+			<tr>
+				<th scope="row">11:00 – 13:00</th>
+				<td>Open</td>
+				<td>Open</td>
+				<td>Closed</td>
+				<td>Closed</td>
+				<td>Closed</td>
+			</tr>
+			<tr>
+				<th scope="row">13:00 – 15:00</th>
+				<td>Open</td>
+				<td>Open</td>
+				<td>Open</td>
+				<td>Closed</td>
+				<td>Closed</td>
+			</tr>
+			<tr>
+				<th scope="row">15:00 – 17:00</th>
+				<td>Closed</td>
+				<td>Closed</td>
+				<td>Closed</td>
+				<td>Open</td>
+				<td>Open</td>
+			</tr>
+		</table>
+	<h3 id="appropriate-table-headers">Tables use appropriate headers</h3>
+		<p>Make sure table headings are appropriate to the rows/columns it is for. The headings should describe the data in the cells. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding WCAG Criteria 1.3.1</a>. The multiplication table properly conveys the data in the table:</p>
+		<table class="table">
+			<caption>Multiplication Table<caption>
+			<tr>
+				<td></td>
+				<th scope="col">1</th>
+				<th scope="col">2</th>
+				<th scope="col">3</th>
+				<th scope="col">4</th>
+			</tr>
+			<tr>
+				<th scope="row">1</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>2</td>
+				<td>4</td>
+				<td>6</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>3</td>
+				<td>6</td>
+				<td>9</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td>4</td>
+				<td>8</td>
+				<td>12</td>
+				<td>16</td>
+			</tr>
+		</table>
+	<h3 id="table-read-order">Tables must be created so they are read from top to bottom, left to right</h3>
+		<p>Any table should be read from the top left corner and then read to the right. If a table has 5 columns and 9 rows, the screen reader should start with column 1 row 1 then go to column 2 row 1 until the end of the row. Then the screen reader should go to column 1 row 2 and continue the process. Helpful WCAG Post: <a href="https://www.w3.org/TR/WCAG20-TECHS/F49.html">Failure to Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized</a>. This table is read correctly:</p>
+				<table class="table">
+			<caption>Multiplication Table<caption>
+			<tr>
+				<td></td>
+				<th scope="col">1</th>
+				<th scope="col">2</th>
+				<th scope="col">3</th>
+				<th scope="col">4</th>
+			</tr>
+			<tr>
+				<th scope="row">1</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>2</td>
+				<td>4</td>
+				<td>6</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>3</td>
+				<td>6</td>
+				<td>9</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td>4</td>
+				<td>8</td>
+				<td>12</td>
+				<td>16</td>
+			</tr>
+		</table>
+	<h2 id="text">Text</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="visual-text">Visual elements are created using text and not using images</h3>
+		<p>Any elements that can be text should be text. For example, a button with a + symbol to add an element should have the text "+" and not the image of a plus symbol. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html">Understanding WCAG Criteria 1.4.5</a>.</p>
+	<h3 id="font-size">Font size can be increased up to 200% without making any of the content hard to read</h3>
+		<p>This does not mean that websites need to have a built in zoom scroller. It means that websites should allow a browser's zoom settings to zoom in up to 200%. Zooming in should not make the website lose content or functionality. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text">Understanding WCAG Criteria 1.4.4</a>. This page can be zoomed in up to (and past) 200% without a loss of any content/functionality.</p>
+	<h3 id="text-not-images">Information is presented using text, and not images of text</h3>
+		<p>Any images that can be text should be text. Text that is customizable by the user, or is considered essential to the image don't fail the criteria (logo text is considered essential.) Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html">Understanding WCAG Criteria 1.4.5</a>. The following shows a good and bad example:</p>
+		<div id="image-example">
+			<figure>
+				<img src="./Sources/text-image.jpg" alt="I'm not totally useless. I can be used as a bad example." style="width:100%">
+				<figcaption><span>Bad Example</span></figcaption>
+			</figure>
+			<div>
+				<p>I'm not totally useless. I can be used as a good example.</p>
+				<span>Good Example</span>
+			</div>
+		</div>
+	<h2 id="time-limits">Time Limits</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="time-limit-options">If a page or application has a time limit, the user is given options to turn off, adjust, or extend that time limit</h3>
+		<p>Any time limit needs to have one of the following to meet criteria:
+		<ul>
+			<li>Turn off</li>
+			<li>Adjust time limit</li>
+			<li>Extend time limit</li>
+			<li>Real-time Exception (no alternative is possible i.e. like an auction.)</li>
+			<li>Essential Exception (the time limit is essential and extending it would invalidate the activity.)</li>
+			<li>20+ hour time limit</li>
+		</ul>
+		Helpful WCAG Post: <a href="">Understanding WCAG Criteria 2.2.1</a>. This news ticker meets the first 3 criterias:</p>
+		<div class="ticker" id="time-ticker"><span>Welcome to the news ticker! Stay tuned for updates...</span></div>
+		<div class="controls">
+			<button onclick="timeResumeTicker()">Resume</button>
+			<button onclick="timeStopTicker()">Pause</button>
+			<label for="time-interval">Update Interval (ms): </label>
+			<input type="number" id="time-interval" value="2000" min="500" step="500">
+			<button onclick="timeUpdateInterval()">Set Interval</button>
+		</div>
+	<h2 id="hyperlinks">Hyperlinks</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="consistent-link-order">Links that are repeated throughout a website are presented in the same relative order each time they appear</h3>
+		<p>Anytime a group of links are present throughout a page/website, like a navigation bar, they should be in the same order. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation">Understanding WCAG Criteria 3.2.3</a>. This page would actually fail this criteria since the navigation bar is different. This is chosen to be that way because the dropdown menu didn't serve any purpose.</p>
+	<h3 id="consistent-link-titles">Links that appear repeatedly throughout a website have identical or at least consistent title text</h3>
+		<p>Links that go to the same place should have the same or nearly the same visible text. The links should also have consistent styling. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification">Understanding WCAG Criteria 3.2.4</a>. This page has links that go to the same WCAG criteria and the links have the same text.</p>
+	<h3 id="clear-link-titles">Link titles clearly tell users the link’s destination</h3>
+		<p>A link's title should be descriptive enough for users to understand where their destination will be.  Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context">Understanding WCAG Criteria 2.4.4</a>. The link in this paragraphs clearly explains the destination of the link (WCAG criteria 2.4.4.)</p>
+	<h3 id="unique-link-titles">Link titles are distinct and unique to their location</h3>
+		<p>Link titles shouldn't be the same as other link titles unless they go to the same place. If they do, then they should follow <a href="#consistent-link-titles">Links that appear repeatedly throughout a website have identical or at least consistent title text</a> criteria.</p>
+	<h3 id="appropriate-link-titles">Links have unique, appropriate title text and have multiple ways to clearly identify them as links</h3>
+		<p>Links should be identifiable and distinct from other elements. Some ways to identify a link is if it's a different color, underlined, and/or has a properly added icon. This page (and website) has chosen to always underline links and have them all be the same color.</p>
+	<h2 id="images">Images</h2>
+	<a href="#skip-top">Scroll To Top</a>
+	<h3 id="descriptive-alt-text">All meaningful images have descriptive alt text</h3>
+		<p>Informative images should have alt text present that is simple, explains the image, and is relatively short. Images that are decorative should have a blank/null alt text. That means that the alt text is in the image but it's just "". Helpful WCAG Posts: <a href="https://www.w3.org/WAI/tutorials/images/informative/">Informative Images</a>, <a href="https://www.w3.org/WAI/tutorials/images/decorative/">Decorative Images</a>, <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">Understanding WCAG Criteria 1.1.1</a></p>
+	<h3 id="descriptive-image-labels">Images that serve a purpose or require user interaction have descriptive label</h3>
+		<p>All images that require user input should have a descriptive label. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions">Understanding WCAG Criteria 3.3.2</a>. The following is an example of an image being used in a button and being labeled by an ARIA label. Note: Again this submit button doesn't really do anything besides reload the page. This should be fixed but since this is just an example of how an image could be labeled the website creator didn't want to add it.</p>
+		<p>Subscribe to our newsletter!</p>
+		<form>
+			<label for="image-email">Email:</label>
+			<input type="email" id="image-email" name="image-email" required>
+			<button type="submit">
+				<img src="./Sources/mail-icon.png" aria-label="submit form" alt="" style="max-width: 24px;">
+			</button>
+		</form>
+	<h3 id="image-text-name-attribute">Images of text should also have an alt attribute that contains the same text</h3>
+		<p>Any image that contains text should have that text in the alt text. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html">Understanding WCAG Criteria 1.4.5</a>. The following example shows Microsoft's logo. The image contains text and that text is present in the alt text.</p>
+		<img src="./Sources/microsoft.png" alt="microsoft logo">
+	<h3 id="decorative-images">Decorative images contain empty alt text</h3>
+		<p>Decorative images should have an empty/null alt text. Sometimes, images won't have any alt text in the element which does not meet the criteria. Use <a href="https://www.w3.org/WAI/tutorials/images/decorative/">W3C's Decorative Images post</a> for examples of decorative images. And use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">W3C's alt decision tree</a> for help on deciding if an image needs alt text.</p>
+	<h2 id="videos">Videos</h2>
+	<a href="#skip-top">Scroll to Top</a>
+	<p><b>It should be noted that videos on this page will have auto generated captions. Usually, auto generated captions do not meet the quality standards of the WCAG. All videos should have captions and a transcript.</b></p>
+	<h3 id="video-title-description">Videos are introduced with a clear title and/or description</h3>
+		<p>Videos should have a title and/or a description. This means that videos should not just be added to a page without any context. The following example shows a title for the video Never Gonna Give You Up:</p>
+		<p class="video-title">Never Gonna Give You Up</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SWB5EwXPvwqOreeN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<span>(<a href="https://docs.google.com/document/d/e/2PACX-1vRlLGMPj8l_4ubd8fKlFPUnAyVU2SQlzBJc11JIYqPMGsR6tNPKDZoKH6JWCjToqzdpjmQEaxTufh3v/pub">3:32 mins, "Never Gonna Give You Up" Transcript</a>)</span>
+	<h3 id="no-flashing-content">Videos have no flashing content that flashes more than 3X/second</h3>
+		<p>All videos (or any element in general) should not flash more than 3 times a second. If a flash is required in the content then it should be limited in the size of the flash and it should be below the flash threshold size. Helpful WCAG Posts: <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold">Understanding WCAG Criteria 2.3.1</a> and <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G176">Keeping the flashing area small enough</a>. The video never gonna give you up does not have more than 3 flashes in a second.</p>
+		<p class="video-title">Never Gonna Give You Up</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SWB5EwXPvwqOreeN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<span>(<a href="https://docs.google.com/document/d/e/2PACX-1vRlLGMPj8l_4ubd8fKlFPUnAyVU2SQlzBJc11JIYqPMGsR6tNPKDZoKH6JWCjToqzdpjmQEaxTufh3v/pub">3:32 mins, "Never Gonna Give You Up" Transcript</a>)</span>
+	<h3 id="stop-pause-sound">Video that plays automatically have a mechanism for stopping/pausing the sound</h3>
+		<p>Any element that auto plays audio or video should be less than 3 seconds or have an audio control that allows the element to be paused or muted. Helpful WCAG Post: <a href="https://www.w3.org/WAI/standards-guidelines/act/rules/80f0bf/proposed/">Audio or video element avoids automatically playing audio</a>. Due to me not wanting to annoy you everytime you open this page, and this criteria is pretty self explanitory, I will not provide an example.</p>
+	<h2 id="transcripts-captions">Transcripts and Captions</h2>
+		<a href="#skip-top">Scroll to Top</a>
+	<h3 id="descriptive-transcripts">All pre-recorded videos have a descriptive transcript or audio descriptions</h3>
+		<p>All pre-recorded videos need a transcript or correct audio descriptions. An audio description is a narration added to the video to describe important visual details. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html">Audio or video element avoids automatically playing audio</a>. The following video has an added transcript:</p>
+		<p class="video-title">Never Gonna Give You Up</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SWB5EwXPvwqOreeN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<span>(<a href="https://docs.google.com/document/d/e/2PACX-1vRlLGMPj8l_4ubd8fKlFPUnAyVU2SQlzBJc11JIYqPMGsR6tNPKDZoKH6JWCjToqzdpjmQEaxTufh3v/pub">3:32 mins, "Never Gonna Give You Up" Transcript</a>)</span>
+	<h3 id="live-captions">Live video conferences and web casts have synchronized captions</h3>
+		<p>All live videos should have synchronized captions added to the video. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html">Understanding WCAG Criteria 1.2.4</a>. Since we can't always have a live video going 24/7 with someone doing synchronized captions, there is no example for this criteria.</p>
+	<h2 id="moving-flashing-content">Moving and Flashing Content</h2>
+	<a href="#skip-top">Scroll to Top</a>
+	<h3 id="pause-stop-content">Rapidly flashing or changing content can be paused or stopped</h3>
+		<p>Any elements that flash or change can be paused or stopped. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html">Understanding WCAG Criteria 1.2.4</a>. The following example shows a slowly flashing element that can be stopped and resumed:</p>
+		<div class="flashing-content" id="flashingBox"></div>
+		<button onclick="pauseFlashing()">Pause</button>
+		<button onclick="resumeFlashing()">Resume</button>
+	<h3 id="no-flashing-content-3X">Pages contain no flashing content that flashes more than three times per second</h3>
+		<p>Flashing content should be less than 3 times a second, or the flash is below the <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold#dfn-general-flash-and-red-flash-thresholds">general flash and red flash thresholds</a>. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold">Understanding WCAG Criteria 2.3.1</a></p>
+	<h2 id="color-usage">Color Usage</h2>
+	<a href="#skip-top">Scroll to Top</a>
+	<h3 id="color-solely">Color isn't used solely to understand information, navigate a page, complete a task, or know what action to take</h3>
+		<p>You should be able to navigate the page, get information, and/or complete a task even if color is not present. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">Understanding WCAG Criteria 1.4.1</a>. The following example allows the user to know what button to click with both color and text:</p>
+		<p>Click the blue button.</p>
+		<button class="blue-button" class="alert1">Blue</button>
+		<button class="green-button">Green</button>
+	<h3 id="color-contrast-small-text">Text that is 14 pt or smaller has a color contrast ratio of at least 4.5:1 with the background color</h3>
+		<p>Any text below 14pt font should have a color contrast of 4.5:1. You can check the font size by using the inspect tool. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">Understanding WCAG Criteria 1.4.3</a>. This page does not contain any color contrast errors. (You can check via the wave tool or manually.)</p>
+	<h3 id="color-contrast-large-text">Large text has a color contrast ratio of at least 3:1</h3>
+		<p>All large text should have a color contrast of 3:1. You can check the font size by using the inspect tool. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">Understanding WCAG Criteria 1.4.3</a>. This page does not contain any color contrast errors. (You can check via the wave tool or manually.)</p>
+	<h3 id="color-contrast-ui">UI components and graphical objects have a contrast ratio of at least 3:1</h3>
+		<p>Very similar to large text. Elements like logos and UI components like decorations should have a contrast ratio of at least 3:1.<a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">Understanding WCAG Criteria 1.4.3</a>. The changing color in <a href="#pause-stop-content">Rapidly flashing or changing content can be paused or stopped</a> meets the criteria.</p>
+	<h2 id="audio-clips-sound">Audio Clips and Sound</h2>
+	<a href="#skip-top">Scroll to Top</a>
+	<h3 id="audio-title-description">All audio clips have a clear title and/or description beforehand</h3>
+		<p>Audio should have a title and/or a description. This means that audio should not just be added to a page without any context. The audio of this horse neighing has a title:</p>
+		<p class="video-title">Horse Neigh</p>
+		<audio controls>
+			<source src="./Sources/horse-neigh.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<a href="https://docs.google.com/document/d/e/2PACX-1vST2R35JgbI3kLJMykHOftplIsW5C-IPOsTMdUj6v5B9jVKiHyU1Efn4zBUiD1yDbZSu_7hxkc64Iup/pub">(0:02 mins, "Horse Neighing" Transcript)</a>
+	<h3 id="stop-audio">Audio that automatically plays for more than 3 seconds can be stopped by user</h3>
+		<p>All audio that automatically turns on and plays more than 3 seconds should be able to be paused and/or stopped by the user. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html">Understanding WCAG Criteria 1.4.2</a> The horse example doesn't automatically play and is less than 3 seconds, but it can still be paused.</p>
+		<p class="video-title">Horse Neigh</p>
+		<audio controls>
+			<source src="./Sources/horse-neigh.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<a href="https://docs.google.com/document/d/e/2PACX-1vST2R35JgbI3kLJMykHOftplIsW5C-IPOsTMdUj6v5B9jVKiHyU1Efn4zBUiD1yDbZSu_7hxkc64Iup/pub">(0:02 mins, "Horse Neighing" Transcript)</a>
+	<h3 id="audio-only-transcripts">Pre-recorded clips that are audio-only have a transcript</h3>
+		<p>All pre recorded audio should have correct and appropriate transcripts. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html">Understanding WCAG Criteria 1.2.1</a>. The horse audio has a transcript next to it.</p>
+		<p class="video-title">Horse Neigh</p>
+		<audio controls>
+			<source src="./Sources/horse-neigh.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<a href="https://docs.google.com/document/d/e/2PACX-1vST2R35JgbI3kLJMykHOftplIsW5C-IPOsTMdUj6v5B9jVKiHyU1Efn4zBUiD1yDbZSu_7hxkc64Iup/pub">(0:02 mins, "Horse Neighing" Transcript)</a>
+	<h3 id="live-audio-captions">Live broadcasts that are audio-only must contain synchronized captions</h3>
+		<p>All live audio should contain synchronized captions. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-only-live">Understanding WCAG Criteria 1.2.9</a>. Since we can't always have live audio going 24/7 with someone doing synchronized captions, there is no example for this criteria.</p>
+	<h3 id="sound-description">A text description is provided for any sound used to indicate something</h3>
+		<p>All audio that indicates something (i.e. an alarm) should have a text description as well. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html">Understanding WCAG Criteria 1.2.3</a>. The following example has a ping sound and text appears and is read by the screen reader when the button is clicked.</p>
+		<button id="notifyButton">Notify me</button>
+    
+		<div class="notification" id="notificationText" aria-live="assertive" aria-atomic="true">
+		</div>
+		
+		<audio id="notificationSound" src="./Sources/notification.mp3" aria-hidden="true"></audio>
+		</audio>
+	<h3 id="no-sound-only-instructions">Instructions don't rely solely on sound in order to understand or complete any task</h3>
+		<p>A user should be able to complete tasks/follow instructions without needing to hear anything. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html">Understanding WCAG Criteria 1.3.3</a>. In the following example, an audio recording could be played that stated to click the blue button. The audio was removed and just gives the instructions via text.</p>
+		<p>Click the blue button.</p>
+		<button class="alert1 blue-button">Blue</button>
+		<button class="green-button">Green</button>
+	<h2 id="zoom-reflow">Zoom and Reflow</h2>
+	<a href="#skip-top">Scroll to Top</a>
+	<h3 id="zoom-200-300">The page is readable and functional when the page is zoomed to 200-300%</h3>
+		<p>Text should be able to be zoomed up to 200% without any content being lost or hard to read/covered. A two dimensional scrollbar should not be present while zoomed in. If a page has vertical scrolling, then all content should be present and viewable with a minimum width of 320 CSS pixels. If a page has horizontal scrolling, then all content should be present and viewable with a minimum height of 256 CSS pixels. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow">Understanding WCAG Criteria 1.4.10</a>. This page allows text to be zoomed into 200% and no content is lost, but it does experience some readability issues when the page is set to a mobile view.</p>
+	<h3 id="no-horizontal-scrolling">All text content is available without horizontal scrolling. Content can be displayed directly in the page, revealed via accessible controls, or accessed via direct links.</h3>
+		<p>The page should not have any two dimensional scrolling unless the elements need to have a two-dimensional layout/usage. Some elements that are okay to have 2D scrolling is: Data tables (not the individual cells,) maps/diagrams, videos (in certain cases, see the Understanding 1.4.10 criteria,) games, presentations, and interfaces where toolbars need to be kept in view while manipulating content. Two dimensional scrolling should not be present even when zoomed in unless one of the previously mentioned elements are present. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow">Understanding WCAG Criteria 1.4.10</a>. This page does not contain any two dimensional scrolling, even when zoomed in.</p>
+</main>
+</body>
+</html>

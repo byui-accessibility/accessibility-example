@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page 2 - Software Training Example</title>
+<link rel="stylesheet" href="styles-two.css">
+</head>
+<body>
+<nav>
+	<ul>
+		<li><a href="./index.html">Page 1</a></li>
+		<li><a href="./page-2.html">Page 2</a></li>
+		<li><a href="./good-examples.html">Criteria Examples</a></li>
+		<li>
+			<div class="dropdown-menu">
+				<button id="dropdown-btn" aria-expanded="false" aria-controls="dropdown-menu">Dropdown Menu ↓</button>
+				<ul id="dropdown-menu" aria-labelledby="dropdown-btn" tabindex="-1" aria-hidden="true">
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+	<main>
+		<p>I love tigers! They're so cool!</p>
+		<img id="tiger-image" src="./Sources/tiger.jpeg" alt="a tiger laying in the grass">
+		<p>You really need to go to the <a id="important-link" href="https://www.merriam-webster.com/dictionary/important" tabindex="-1">definition of important</a> page!	</p>
+		<p>Let's learn some math!<p>
+		<table>
+			<caption>Multiplication Table<caption>
+			<tr>
+				<td></td>
+				<th scope="col">1</th>
+				<th scope="col">2</th>
+				<th scope="col">3</th>
+				<th scope="col">4</th>
+			</tr>
+			<tr>
+				<th scope="row">1</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>2</td>
+				<td>4</td>
+				<td>6</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>3</td>
+				<td>6</td>
+				<td>9</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td>4</td>
+				<td>8</td>
+				<td>12</td>
+				<td>16</td>
+			</tr>
+		</table>
+		<div class="table">
+			<span id="caption">Division Table</span>
+			<div class="row">
+				<span id="blank"></span>
+				<span class="head">1</span>
+				<span class="head">2</span>
+				<span class="head">3</span>
+				<span class="head">4</span>
+			</div>
+			<div class="row row-even">
+				<span class="head">1</span>
+				<span>1</span>
+				<span>2</span>
+				<span>3</span>
+				<span>4</span>
+			</div>		
+			<div class="row">
+				<span class="head">2</span>
+				<span>0.5</span>
+				<span>1</span>
+				<span>1.5</span>
+				<span>2</span>
+			</div>
+			<div class="row row-even">
+				<span class="head">3</span>
+				<span>0.33</span>
+				<span>0.66</span>
+				<span>1</span>
+				<span>1.33</span>
+			</div>
+			<div class="row">
+				<span class="head">4</span>
+				<span>0.25</span>
+				<span>0.5</span>
+				<span>0.75</span>
+				<span>1</span>
+			</div>
+		</div>
+		<p>Now that you've seen my totally cool and accessible page, can you provide some feedback?<br>Note: You don't actually have to provide feedback. This is just a form that you should test for accessibility</p>
+		<form>
+			<div>
+				<label for="first-name">First Name:</label>
+				<input id="first-name" type="textbox" required>
+			</div>
+			<div>
+				<label for="first-name">Last Name:</label>
+				<input id="last-name" type="textbox" required>
+			</div>
+			<div id="feedback-div">
+				<label>Feedback:</label>
+				<textarea id="feedback" rows="4" cols="50" required></textarea>
+			</div>
+			<input id="submit-button" type="submit" value="Submit">
+		</form>
+	</main>
+</body>
+</html>

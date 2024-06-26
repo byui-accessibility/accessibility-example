@@ -1,0 +1,182 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#nav {
+		background-color: lightgray;
+		padding: 12px;
+}
+
+#nav ul {
+		display: flex;
+		justify-content: space-around;
+}
+
+#nav ul a {
+	font-size: 18px;
+}
+#nav ul li {
+	list-style-type: none;
+}
+
+.highlight {
+  background-color: yellow; /* or any other highlight style you prefer */
+  transition: background-color 1s ease; /* smooth transition */
+}
+
+*:focus {
+    outline: 2px solid red;
+    outline-offset: 2px;
+}
+
+
+/*No unexpexted changes */
+.box {
+	width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: lightblue;
+	transition: background-color 0.3s ease;
+}
+
+#expected-message {
+	margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/*automatically updating content can be paused*/
+.ticker {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+	margin: 0px 0px 6px 0px;
+}
+
+/*Change command*/
+.command-area {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.dynamic-div {
+	display: flex;
+	align-items: center;
+}
+.dynamic-div button {
+	height: fit-content;
+}
+
+/*focusing prevents additional content from disapearing*/
+
+.focusable-button {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .additional-content {
+    display: none;
+    border: 1px solid black;
+    padding: 10px;
+  }
+ 
+/*SR menus are easy to navigate */
+#sr-nav {
+		background-color: lightgray;
+		padding: 12px;
+}
+
+#sr-nav ul {
+		display: flex;
+		justify-content: space-around;
+}
+
+#sr-nav ul a {
+	font-size: 18px;
+}
+#sr-nav ul li {
+	list-style-type: none;
+}
+#sr-dropdown-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+/*Headings levels*/
+.heading-margin {
+	border: 1px solid black;
+}
+
+.heading-margin h2 {
+	margin-left: 24px;
+}
+.heading-margin h3 {
+	margin-left: 60px;
+}
+
+/*Should be a heading*/
+#heading-functionality p {
+	margin-left: 24px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/*Appropriate table HTML*/
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 550px;
+}
+
+.table td, .table th{
+	border: 1px solid black;
+	padding: 3px;
+}
+
+.table th {
+	background-color: #005a6a;
+	color: white;
+}
+
+/**Image as text**/
+#image-example {
+	display: flex;
+	align-items: center;
+}
+
+/*Videos*/
+.video-title {
+	font-size: 1.1em;
+	margin: 10px 0;
+}
+
+/*flashing content*/
+.flashing-content {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	animation: flash 2s infinite;
+	margin: 12px;
+}
+
+@keyframes flash {
+    0% { background-color: green; }
+    50% { background-color: blue; }
+    100% { background-color: green; }
+}
+/*Text conveyed by color*/
+.blue-button {
+	color: blue;
+}
+.green-button {
+	color: green;
+}
+
+/**page flow image**/
+#flow-img {
+	max-width: 500px;
+}

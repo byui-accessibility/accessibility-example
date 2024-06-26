@@ -1,0 +1,183 @@
+* {
+	font-family: Times New Roman;
+}
+
+body {
+	margin: 0px;
+}
+
+main {
+	margin: 12px;
+}
+
+a {
+ color: blue;
+}
+
+nav {
+		background-color: lightgray;
+		padding: 12px;
+}
+
+nav ul {
+		display: flex;
+		justify-content: space-around;
+}
+
+nav ul a {
+	font-size: 20px;
+}
+
+p, span, td, th, caption {
+	font-size: 20px;
+}
+
+nav ul li {
+	list-style-type: none;
+}
+
+#dropdown-btn {
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+}
+
+.dropbtn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover, .dropdown-content a:focus {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content, .dropdown:focus.dropdown-content  {
+  display: block;
+}
+
+#dropdown-btn:hover + ul {
+    display: block;
+}
+
+#dropdown-menu:hover {
+	display: block;
+}
+
+#dropdown-menu {
+    display: none;
+}
+
+#dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  color: #333;
+  position: absolute;
+  background-color: white;
+}
+
+.dropdown-menu ul li a {
+  display: block;
+  padding: 10px;
+}
+
+#tiger-image {
+	width: 800px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 550px;
+}
+
+th {
+	background-color: #005a6a;
+	color: white;
+	border: 1px solid #dddddd;
+	text-align: left;
+}
+td {
+    border: 1px solid #dddddd;
+}
+
+tr:nth-child(even) {
+        background-color: #f2f2f2;
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 550px;
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	border-collapse: collapse;
+}
+.head {
+	background-color: #005a6a;
+	color: white;
+	border: 1px solid #dddddd;
+	text-align: left;
+	width: 100%;
+	font-weight: bold;
+}
+.row span {
+    border: 1px solid #dddddd;
+	width: 100%;
+}
+
+.row-even {
+ background-color: #f2f2f2;
+}
+
+#caption {
+	align-self: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form div {
+	margin: 12px;
+}
+
+#feedback {
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	margin: 12px;
+}
+
+#submit-button {
+	width: 75px;
+	margin: 12px;
+	text-align: center;
+}
+#feedback-div {
+	display: flex;
+	flex-direction: column;
+}
