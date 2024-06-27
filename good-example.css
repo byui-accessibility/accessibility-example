@@ -1,6 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
+//Make sure no one gets vertigo if they want reduced motion
+@media (prefers-reduced-motion) {
+	html {
+		scroll-behavior: auto;
+	}
+}
 
 #nav {
 		background-color: lightgray;
@@ -19,9 +25,16 @@ html {
 	list-style-type: none;
 }
 
+.warning {
+	padding: 12px;
+	background-color: #ff2a511a;
+	border-left: 2px solid red;
+	border-radius: 5px;
+}
+
 .highlight {
   background-color: yellow; /* or any other highlight style you prefer */
-  transition: background-color 1s ease; /* smooth transition */
+  transition: background-color 2s ease; /* smooth transition */
 }
 
 *:focus {
@@ -159,8 +172,8 @@ html {
 	width: 100px;
 	height: 100px;
 	background-color: red;
-	animation: flash 2s infinite;
 	margin: 12px;
+	background-color: green;
 }
 
 @keyframes flash {

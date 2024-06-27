@@ -1,3 +1,5 @@
+
+
 //Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function(e) {
@@ -9,23 +11,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 			target.addEventListener('focusout', () => {
 				target.removeAttribute('tabindex');
 			});
-
-			target.scrollIntoView({
-			  behavior: 'smooth'
-			});
 			
-			
+			// Make the element focusable if it's not already
+			target.setAttribute('tabindex', '-1');
+			target.focus();
 			// Remove any existing highlight classes
 			document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
-
-			// Add highlight class to target element
-			target.classList.add('highlight');
-			target.setAttribute('tabindex', '-1'); // Make the element focusable if it's not already
-			target.focus();
-			// Remove highlight class after a delay (e.g., 2 seconds)
+			// Remove highlight class after a delay (3 seconds)
 			setTimeout(() => {
 			  target.classList.remove('highlight');
-			}, 2000);
+			}, 3000);
+			
+			//Checks if the user wants reduced motion. This allows those with vertigo to have a better user experience
+			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			  // The user prefers reduced motion
+			  target.scrollIntoView({
+					behavior: 'auto'
+				});
+			} else {
+				//User does not have reduced motion enabled
+				target.scrollIntoView({
+					behavior: 'smooth'
+				});
+				// Add highlight class to target element
+				target.classList.add('highlight');
+			}
 		});
 	});
 	
@@ -277,7 +287,7 @@ timeStartTicker();
 
 //Flashing content
 let flashingBox = document.getElementById('flashingBox');
-let animationPaused = false;
+let animationPaused = true;
 
 function pauseFlashing() {
     if (!animationPaused) {
@@ -289,6 +299,7 @@ function pauseFlashing() {
 function resumeFlashing() {
     if (animationPaused) {
         flashingBox.style.animationPlayState = 'running';
+		flashingBox.style.animation = 'flash 2s infinite';
         animationPaused = false;
     }
 }
