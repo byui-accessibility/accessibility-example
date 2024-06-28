@@ -243,11 +243,10 @@
 	<h3 id="no-unexpected-changes">Interacting with elements on the page doesn't cause any unexpected, dramatic changes that may confuse the user</h3>
 		<p>Elements that affect a page should be easily understood and should not change the page in a way that can cause the user to become confused (i.e. random pop ups, pages to other websites being navigated to unexpectedly, etc.) Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/on-input">Understanding WCAG Criteria 3.2.2</a>. In the following example, interacting with the elements is predictable. Their interactions and changes are expected because of the button's stating their purpose. It is also not dramatic as there is immediate and understandable feedback on what changes.</p>
 		<div class="container">
-			<div class="box" class="colorBox" id="colorBox" tabindex="0" aria-label="lightblue box"></div>
+			<div class="box" class="colorBox" id="colorBox" tabindex="0" role="img" aria-label="lightblue box"></div>
 			<div class="expected-message"></div>
 			<button onclick="changeColor('lightcoral')">Change to Coral</button>
 			<button onclick="changeColor('lightgreen')">Change to Green</button>
-			<button onclick="displayMessage()">Display Message</button>
 		</div>
 	<h3 id="auto-updating-content">Automatically updating content can be paused, stopped, hidden or allow user to modify the timing of content</h3>
 		<p>All elements that have a timer and/or update automatically should have a function to affect the change of the element. These elements/content should have one of the following be true: be able to be turned off, allow its time to be adjusted before it starts, extended before the time expires, have a time limit greater than 20 hours, the element is in real time (i.e. an auction,) or changing the time would invalidate the activity. Helpful WCAG Post: <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide">Understanding WCAG Criteria 2.2.2</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable">Understanding WCAG Criteria 2.2.1</a>. This news story ticker can be stopped, resumed, and the interval can be changed.</p>
@@ -557,7 +556,7 @@
 			<label for="image-email">Email:</label>
 			<input type="email" id="image-email" name="image-email" required>
 			<button type="submit">
-				<img src="./Sources/mail-icon.png" aria-label="submit form" alt="" style="max-width: 24px;">
+				<img src="./Sources/mail-icon.png" alt="submit form" style="max-width: 24px;">
 			</button>
 		</form>
 	<h3 id="image-text-name-attribute">Images of text should also have an alt attribute that contains the same text</h3>
