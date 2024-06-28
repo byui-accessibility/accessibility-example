@@ -1,6 +1,6 @@
 
 
-//Smooth scrolling
+//This enables smooth scrolling but removes it if the reduced motion setting is enabled
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function(e) {
 			e.preventDefault();
@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		});
 	});
 	
-//Alert buttons
+//Create alerts for alert buttons
 let alert1 = document.querySelectorAll('.alert1')
 alert1.forEach(item => {
 	item.addEventListener('click', () => {
@@ -108,6 +108,13 @@ dropdownMenu.addEventListener('focusout', function () {
 	if (!dropdownBtn.contains(event.relatedTarget) && !dropdownMenu.contains(event.relatedTarget)) {
 		dropdownMenu.style.display = 'none';
 		dropdownBtn.setAttribute('aria-expanded', 'false');
+	}
+});
+dropdownMenu.addEventListener('keydown', (event) => {
+	if(event.key == 'Escape') {
+			dropdownMenu.style.display = 'none';
+			dropdownBtn.setAttribute('aria-expanded', 'false');
+			dropdownBtn.focus();
 	}
 });
 	
