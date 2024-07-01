@@ -95,6 +95,10 @@ li.dropdown {
   background-color: white;
 }
 
+#dropdown-menu li:hover{
+	background-color: gray;
+}
+
 .dropdown-menu ul li a {
   display: block;
   padding: 10px;
