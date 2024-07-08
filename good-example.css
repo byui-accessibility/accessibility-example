@@ -28,13 +28,6 @@ main ul li {
 	margin: 6px 0px;
 }
 
-.warning {
-	padding: 12px;
-	background-color: #ff2a511a;
-	border-left: 2px solid red;
-	border-radius: 5px;
-}
-
 .highlight {
   background-color: yellow; /* or any other highlight style you prefer */
   transition: background-color 2s ease; /* smooth transition */
