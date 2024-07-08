@@ -11,8 +11,7 @@ main {
 }
 
 #skip a, .skip a{
-	outline: 2px solid black;
-	border-radius: 5px;
+	outline: 2px solid red;
 	position: absolute;
 	padding: 2px;
 	top: -100px;
